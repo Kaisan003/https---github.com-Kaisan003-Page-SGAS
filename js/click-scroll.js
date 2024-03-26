@@ -35,3 +35,9 @@ $(document).ready(function(){
     $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
     $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
 });
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của trình duyệt
+        document.getElementById('top').style.display = 'none'; // Ẩn nội dung phần body
+    }
+});
